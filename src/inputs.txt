@@ -1,0 +1,43 @@
+-- Type 'dWWWWWWWWWWWWWWWWWWWW'
+delay 2.350692
+set timeoutSeconds to 2.000000
+set uiScript to "keystroke \"dWWWWWWWWWWWWWWWWWWWW\""
+my doWithTimeout( uiScript, timeoutSeconds )
+
+on doWithTimeout(uiScript, timeoutSeconds)
+	set endDate to (current date) + timeoutSeconds
+	repeat
+		try
+			run script "tell application \"System Events\"
+" & uiScript & "
+end tell"
+			exit repeat
+		on error errorMessage
+			if ((current date) > endDate) then
+				error "Can not " & uiScript
+			end if
+		end try
+	end repeat
+end doWithTimeout
+-- Press ⇧⌃W
+delay 0.049406
+set timeoutSeconds to 2.000000
+set uiScript to "keystroke \"\" using {shift down, control down}"
+my doWithTimeout( uiScript, timeoutSeconds )
+
+on doWithTimeout(uiScript, timeoutSeconds)
+	set endDate to (current date) + timeoutSeconds
+	repeat
+		try
+			run script "tell application \"System Events\"
+" & uiScript & "
+end tell"
+			exit repeat
+		on error errorMessage
+			if ((current date) > endDate) then
+				error "Can not " & uiScript
+			end if
+		end try
+	end repeat
+end doWithTimeout
+
