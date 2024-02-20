@@ -6,10 +6,11 @@ and you could have it automatically run a macro using Python code. This could be
 # Current features:
 - Translates hotkeys/multiple input lines
 - Translates held-down keys
+- Includes delays between actions
 
 # Planned to be added:
 - Type/writing specifier (Specify which lines are typed rather than actions. For many apps you might have to open chat/search typically with "/" or whatever key bind or mouseclick action in pyautogui the coordinates of the text field)
-- Realtime delays (The program will include a delay from how long you waited then run the next command)
+
 
 # How to use:
 - Record a workflow in Automator app preinstalled on every mac
