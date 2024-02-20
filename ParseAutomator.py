@@ -93,7 +93,7 @@ if pyautogui_commands:
             print(output)
         else: 
             if command.startswith('time.sleep'):
-                print(command)
+                print(f"{command} \n")
             else:
                 numerate(command)
 
