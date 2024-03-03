@@ -103,11 +103,7 @@ if pyautogui_commands:
             formatted_commands_list.append(output)
         else:
             if command.startswith('time.sleep'):
-<<<<<<< HEAD
-                print(f"{command} \n")
-=======
                 formatted_commands_list.append(command)
->>>>>>> 6ef75c6 (Merge changes from remote repository)
             else:
                 formatted_commands_list.extend(numerate(command))
         OrderOfEvents.append(command)
